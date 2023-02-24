@@ -1,0 +1,35 @@
+@startuml
+
+participant user
+participant admin
+entity userService as us
+entity bookingService as bs
+entity carService as cs
+database db
+
+== user registration ==
+user -> us: register user
+us -> db: find user name
+db -> us: user data
+us --> user: success if user name not exists
+us --> user: fail if user name exists
+
+== register car ==
+admin -> cs: register car
+cs -> db: insert car data
+db -> cs: insert result
+cs -> admin: insert result
+
+== user search car ==
+user -> cs: search for available cars
+cs -> db: query available cars
+db -> cs: car data
+cs -> user: car data
+
+== user book car ==
+user -> bs: book one car by car id
+bs -> db: check the availability of the car
+db -> bs: car booking data
+bs --> user: success to book
+bs --> user: fail to book
+@enduml

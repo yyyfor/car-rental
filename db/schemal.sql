@@ -4,7 +4,6 @@ create table car
         primary key,
     brand          varchar(100)                       not null comment 'the brand of the car',
     model          varchar(100)                       not null comment 'the model of the car',
-    price_per_hour decimal(10, 2)                     null comment 'the price for rent car for one hour',
     create_time    datetime default CURRENT_TIMESTAMP not null comment 'the create time of the car',
     update_time    datetime                           null on update CURRENT_TIMESTAMP comment 'the update time of the car'
 )
