@@ -31,6 +31,15 @@ repositories {
 	mavenCentral()
 }
 
+jar {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+	manifest {
+		attributes(
+			'Main-Class': 'com.siming.demo.RentalCarApplication'
+		)
+	}
+}
+
 jacoco {
 	toolVersion = "0.8.8"
 	reportsDirectory = layout.buildDirectory.dir('customJacocoReportDir')
