@@ -11,7 +11,5 @@ i
 9src/main/java/com/siming/demo/constant/CarStatusEnum.java,9/7/973aa1cf60f8c291ab12c39993bd68f44f0a53e1
 a
 1src/main/java/com/siming/demo/entity/Booking.java,5/d/5d9ac186da4acf57e4ebaceed917437abdffc01e
-C
-docker-compose.yaml,e/f/ef8def03dc8f162799089e9b5f4321201c8810d5
 n
 >src/main/java/com/siming/demo/request/RegisterUserRequest.java,7/d/7d23fa5f96e4f2c5e63b40572f2ddfb6ac86e514
