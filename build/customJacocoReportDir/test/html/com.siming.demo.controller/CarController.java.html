@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CarController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.siming.demo.controller</a> &gt; <span class="el_source">CarController.java</span></div><h1>CarController.java</h1><pre class="source lang-java linenums">package com.siming.demo.controller;
+
+import com.siming.demo.request.RegisterCarRequest;
+import com.siming.demo.request.RegisterUserRequest;
+import com.siming.demo.request.SearchCarRequest;
+import com.siming.demo.response.Result;
+import com.siming.demo.service.ICarService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.AllArgsConstructor;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
+/**
+ * &lt;p&gt;
+ * car information 前端控制器
+ * &lt;/p&gt;
+ *
+ * @author siming
+ * @since 2023-02-24
+ */
+@RestController
+@RequestMapping(&quot;/v1/car&quot;)
+@Tag(name = &quot;car controller&quot;)
+<span class="fc" id="L28">@AllArgsConstructor</span>
+public class CarController {
+
+    private final ICarService carService;
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(summary = &quot;register a car&quot;)
+    public Result register(@Valid @RequestBody RegisterCarRequest request) {
+<span class="nc" id="L35">        carService.registerCar(request);</span>
+<span class="nc" id="L36">        return Result.success();</span>
+    }
+
+    @DeleteMapping()
+    @Operation(summary = &quot;delete a car&quot;)
+    public Result delete(@Valid @NotNull @RequestParam Long id) {
+<span class="nc" id="L42">        carService.deleteCar(id);</span>
+<span class="nc" id="L43">        return Result.success();</span>
+    }
+
+    @PostMapping(value = &quot;/search&quot;, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(summary = &quot;search car&quot;)
+    public Result search(@Valid @RequestBody SearchCarRequest request) {
+<span class="nc" id="L49">        var response = carService.searchCar(request);</span>
+<span class="nc" id="L50">        return Result.success(response);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

@@ -41,13 +41,17 @@ public class CarServiceImpl extends ServiceImpl<CarMapper, Car> implements ICarS
 
     @Override
     public Page<Car> searchCar(SearchCarRequest request) {
+        validateTime(request);
+        IPage<Car> page = Page.of(request.getPage(), request.getSize());
+        return baseMapper.searchCar(page, request.getStartTime(), request.getEndTime(), request.getBrand(), request.getModel(), CarStatusEnum.IN_USE.getStatus());
+    }
+
+    private void validateTime(SearchCarRequest request) {
         if(request.getStartTime().isBefore(LocalDateTime.now()) || request.getEndTime().isBefore(LocalDateTime.now())) {
             throw new BaseException(ErrorEnum.BAD_REQUEST, "start time or end time cannot smaller than current time");
         }
         if(request.getStartTime().isAfter(request.getEndTime())) {
             throw new BaseException(ErrorEnum.BAD_REQUEST, "start time cannot larger than end time");
         }
-        IPage<Car> page = Page.of(request.getPage(), request.getSize());
-        return baseMapper.searchCar(page, request.getStartTime(), request.getEndTime(), request.getBrand(), request.getModel(), CarStatusEnum.IN_USE.getStatus());
     }
 }

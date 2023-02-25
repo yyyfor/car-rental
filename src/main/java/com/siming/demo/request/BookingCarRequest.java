@@ -2,12 +2,14 @@ package com.siming.demo.request;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 @Schema(title = "booking car request")
 public class BookingCarRequest {
 

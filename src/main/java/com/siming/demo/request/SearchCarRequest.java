@@ -2,6 +2,7 @@ package com.siming.demo.request;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -11,6 +12,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Schema(title = "search car request")
+@Builder
 public class SearchCarRequest extends PageRequest {
 
     @Parameter(name = "the brand name")

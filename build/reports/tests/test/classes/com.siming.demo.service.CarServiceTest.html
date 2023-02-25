@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - CarServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>CarServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.siming.demo.service.html">com.siming.demo.service</a> &gt; CarServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.136s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">bookingCar()</td>
+<td class="success">0.039s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteCar()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchCar()</td>
+<td class="success">0.017s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchCar2()</td>
+<td class="success">0.069s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-02-26 00:08:15.163  INFO 86263 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.siming.demo.service.CarServiceTest], using SpringBootContextLoader
+2023-02-26 00:08:15.163  INFO 86263 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.siming.demo.service.CarServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2023-02-26 00:08:15.163  INFO 86263 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.siming.demo.service.CarServiceTest]: CarServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-02-26 00:08:15.164  INFO 86263 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.siming.demo.RentalCarApplication for test class com.siming.demo.service.CarServiceTest
+2023-02-26 00:08:15.165  INFO 86263 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2023-02-26 00:08:15.165  INFO 86263 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@25df373d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36806af3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@53517736, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@379327f3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6ba998e3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5e4bb097, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6fb94af, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@28f9873c, org.springframework.test.context.event.EventPublishingTestExecutionListener@fb07c40, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@c7caa29, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@56f809e5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@325ca461, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3e028c16, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5746441d, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4167d831]
+2023-02-26 00:08:15.168  INFO 86263 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@59848202 testClass = CarServiceTest, testInstance = com.siming.demo.service.CarServiceTest@26dd7f53, testMethod = bookingCar@CarServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48e2a9cb testClass = CarServiceTest, locations = '{}', classes = '{class com.siming.demo.RentalCarApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@66153688, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ff415ad, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@15e0fe05, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5d1b9c3d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6d2dc9d2, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2c3dec30], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.jdbc.support.JdbcTransactionManager@1b0cefc8]; rollback [true]
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74008651]
+JDBC Connection [HikariProxyConnection@1992264544 wrapping com.mysql.cj.jdbc.ConnectionImpl@41d72593] will be managed by Spring
+==&gt;  Preparing: INSERT INTO car ( brand, model ) VALUES ( ?, ? )
+==&gt; Parameters: test(String), test(String)
+&lt;==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74008651]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74008651] from current transaction
+2023-02-26 00:08:15.192  WARN 86263 --- [    Test worker] c.b.m.c.t.support.ReflectLambdaMeta      : Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not &quot;opens java.lang.invoke&quot; to unnamed module @53e25b76
+==&gt;  Preparing: SELECT id,brand,model,status,create_time,update_time FROM car WHERE (brand = ? AND model = ?)
+==&gt; Parameters: test(String), test(String)
+&lt;==    Columns: id, brand, model, status, create_time, update_time
+&lt;==        Row: 1062, test, test, 0, 2023-02-26 00:08:15, null
+&lt;==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74008651]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74008651]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74008651]
+2023-02-26 00:08:15.206  INFO 86263 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@59848202 testClass = CarServiceTest, testInstance = com.siming.demo.service.CarServiceTest@26dd7f53, testMethod = bookingCar@CarServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48e2a9cb testClass = CarServiceTest, locations = '{}', classes = '{class com.siming.demo.RentalCarApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@66153688, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ff415ad, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@15e0fe05, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5d1b9c3d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6d2dc9d2, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2c3dec30], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2023-02-26 00:08:15.208  INFO 86263 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@59848202 testClass = CarServiceTest, testInstance = com.siming.demo.service.CarServiceTest@37d77fd2, testMethod = searchCar2@CarServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48e2a9cb testClass = CarServiceTest, locations = '{}', classes = '{class com.siming.demo.RentalCarApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@66153688, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ff415ad, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@15e0fe05, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5d1b9c3d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6d2dc9d2, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2c3dec30], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.jdbc.support.JdbcTransactionManager@1b0cefc8]; rollback [true]
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63822d44]
+JDBC Connection [HikariProxyConnection@2134858343 wrapping com.mysql.cj.jdbc.ConnectionImpl@41d72593] will be managed by Spring
+==&gt;  Preparing: INSERT INTO car ( brand, model ) VALUES ( ?, ? )
+==&gt; Parameters: test(String), test(String)
+&lt;==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63822d44]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63822d44] from current transaction
+==&gt;  Preparing: INSERT INTO car ( brand, model ) VALUES ( ?, ? )
+==&gt; Parameters: test1(String), test1(String)
+&lt;==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63822d44]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63822d44] from current transaction
+==&gt;  Preparing: SELECT COUNT(*) FROM (SELECT c.id, c.brand, c.model FROM car c LEFT JOIN booking b on c.id = b.car_id where (b.start_time &gt; ? or b.end_time &lt; ?) and c.status = ? AND c.brand = ? UNION SELECT c.id, c.brand, c.model FROM car c LEFT JOIN booking b on c.id = b.car_id where c.status = ? and b.id IS NULL AND c.brand = ?) TOTAL
+==&gt; Parameters: 2023-02-26T02:08:15.212526(LocalDateTime), 2023-02-26T01:08:15.212526(LocalDateTime), 0(Integer), test(String), 0(Integer), test(String)
+&lt;==    Columns: COUNT(*)
+&lt;==        Row: 1
+&lt;==      Total: 1
+==&gt;  Preparing: SELECT c.id, c.brand, c.model FROM car c LEFT JOIN booking b on c.id = b.car_id where (b.start_time &gt; ? or b.end_time &lt; ?) and c.status = ? AND c.brand = ? UNION SELECT c.id, c.brand, c.model FROM car c LEFT JOIN booking b on c.id = b.car_id where c.status = ? and b.id IS NULL AND c.brand = ? LIMIT ?
+==&gt; Parameters: 2023-02-26T02:08:15.212526(LocalDateTime), 2023-02-26T01:08:15.212526(LocalDateTime), 0(Integer), test(String), 0(Integer), test(String), 20(Long)
+&lt;==    Columns: id, brand, model
+&lt;==        Row: 1063, test, test
+&lt;==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63822d44]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63822d44]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63822d44]
+2023-02-26 00:08:15.275  INFO 86263 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@59848202 testClass = CarServiceTest, testInstance = com.siming.demo.service.CarServiceTest@37d77fd2, testMethod = searchCar2@CarServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48e2a9cb testClass = CarServiceTest, locations = '{}', classes = '{class com.siming.demo.RentalCarApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@66153688, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ff415ad, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@15e0fe05, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5d1b9c3d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6d2dc9d2, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2c3dec30], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2023-02-26 00:08:15.277  INFO 86263 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@59848202 testClass = CarServiceTest, testInstance = com.siming.demo.service.CarServiceTest@3d68b925, testMethod = deleteCar@CarServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48e2a9cb testClass = CarServiceTest, locations = '{}', classes = '{class com.siming.demo.RentalCarApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@66153688, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ff415ad, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@15e0fe05, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5d1b9c3d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6d2dc9d2, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2c3dec30], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.jdbc.support.JdbcTransactionManager@1b0cefc8]; rollback [true]
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@250f839]
+JDBC Connection [HikariProxyConnection@512085863 wrapping com.mysql.cj.jdbc.ConnectionImpl@41d72593] will be managed by Spring
+==&gt;  Preparing: INSERT INTO car ( brand, model ) VALUES ( ?, ? )
+==&gt; Parameters: test(String), test(String)
+&lt;==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@250f839]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@250f839] from current transaction
+==&gt;  Preparing: UPDATE car SET status=? WHERE id=?
+==&gt; Parameters: 1(Integer), 1065(Long)
+&lt;==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@250f839]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@250f839] from current transaction
+==&gt;  Preparing: SELECT id,brand,model,status,create_time,update_time FROM car WHERE id=?
+==&gt; Parameters: 1065(Long)
+&lt;==    Columns: id, brand, model, status, create_time, update_time
+&lt;==        Row: 1065, test, test, 1, 2023-02-26 00:08:15, 2023-02-26 00:08:15
+&lt;==      Total: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@250f839]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@250f839]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@250f839]
+2023-02-26 00:08:15.287  INFO 86263 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@59848202 testClass = CarServiceTest, testInstance = com.siming.demo.service.CarServiceTest@3d68b925, testMethod = deleteCar@CarServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48e2a9cb testClass = CarServiceTest, locations = '{}', classes = '{class com.siming.demo.RentalCarApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@66153688, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ff415ad, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@15e0fe05, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5d1b9c3d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6d2dc9d2, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2c3dec30], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+2023-02-26 00:08:15.289  INFO 86263 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Began transaction (1) for test context [DefaultTestContext@59848202 testClass = CarServiceTest, testInstance = com.siming.demo.service.CarServiceTest@4254821c, testMethod = searchCar@CarServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48e2a9cb testClass = CarServiceTest, locations = '{}', classes = '{class com.siming.demo.RentalCarApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@66153688, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ff415ad, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@15e0fe05, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5d1b9c3d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6d2dc9d2, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2c3dec30], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]; transaction manager [org.springframework.jdbc.support.JdbcTransactionManager@1b0cefc8]; rollback [true]
+Creating a new SqlSession
+Registering transaction synchronization for SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1270c8ec]
+JDBC Connection [HikariProxyConnection@2038642232 wrapping com.mysql.cj.jdbc.ConnectionImpl@41d72593] will be managed by Spring
+==&gt;  Preparing: INSERT INTO car ( brand, model ) VALUES ( ?, ? )
+==&gt; Parameters: test(String), test(String)
+&lt;==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1270c8ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1270c8ec] from current transaction
+==&gt;  Preparing: INSERT INTO car ( brand, model ) VALUES ( ?, ? )
+==&gt; Parameters: test1(String), test1(String)
+&lt;==    Updates: 1
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1270c8ec]
+Fetched SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1270c8ec] from current transaction
+==&gt;  Preparing: SELECT COUNT(*) FROM (SELECT c.id, c.brand, c.model FROM car c LEFT JOIN booking b on c.id = b.car_id where (b.start_time &gt; ? or b.end_time &lt; ?) and c.status = ? UNION SELECT c.id, c.brand, c.model FROM car c LEFT JOIN booking b on c.id = b.car_id where c.status = ? and b.id IS NULL) TOTAL
+==&gt; Parameters: 2023-02-26T02:08:15.293514(LocalDateTime), 2023-02-26T01:08:15.293514(LocalDateTime), 0(Integer), 0(Integer)
+&lt;==    Columns: COUNT(*)
+&lt;==        Row: 6
+&lt;==      Total: 1
+==&gt;  Preparing: SELECT c.id, c.brand, c.model FROM car c LEFT JOIN booking b on c.id = b.car_id where (b.start_time &gt; ? or b.end_time &lt; ?) and c.status = ? UNION SELECT c.id, c.brand, c.model FROM car c LEFT JOIN booking b on c.id = b.car_id where c.status = ? and b.id IS NULL LIMIT ?
+==&gt; Parameters: 2023-02-26T02:08:15.293514(LocalDateTime), 2023-02-26T01:08:15.293514(LocalDateTime), 0(Integer), 0(Integer), 20(Long)
+&lt;==    Columns: id, brand, model
+&lt;==        Row: 1, BMW, 1
+&lt;==        Row: 2, BMW, 3
+&lt;==        Row: 3, BMW, 5
+&lt;==        Row: 4, toyota, 1
+&lt;==        Row: 1066, test, test
+&lt;==        Row: 1067, test1, test1
+&lt;==      Total: 6
+Releasing transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1270c8ec]
+Transaction synchronization deregistering SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1270c8ec]
+Transaction synchronization closing SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1270c8ec]
+2023-02-26 00:08:15.303  INFO 86263 --- [    Test worker] o.s.t.c.transaction.TransactionContext   : Rolled back transaction for test: [DefaultTestContext@59848202 testClass = CarServiceTest, testInstance = com.siming.demo.service.CarServiceTest@4254821c, testMethod = searchCar@CarServiceTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48e2a9cb testClass = CarServiceTest, locations = '{}', classes = '{class com.siming.demo.RentalCarApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@66153688, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@6ff415ad, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@15e0fe05, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5d1b9c3d, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@6d2dc9d2, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2c3dec30], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -&gt; true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -&gt; true, 'org.springframework.test.context.event.ApplicationEventsTestExecutionListener.recordApplicationEvents' -&gt; false]]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6</a> at Feb 26, 2023, 12:08:15 AM</p>
+</div>
+</div>
+</body>
+</html>

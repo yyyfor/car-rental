@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Result.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">demo</a> &gt; <a href="index.source.html" class="el_package">com.siming.demo.response</a> &gt; <span class="el_source">Result.java</span></div><h1>Result.java</h1><pre class="source lang-java linenums">package com.siming.demo.response;
+
+import lombok.Builder;
+import lombok.Data;
+
+import static com.siming.demo.constant.Constant.SUCCESS_CODE;
+import static com.siming.demo.constant.Constant.SUCCESS_MESSAGE;
+
+<span class="nc" id="L9">@Builder</span>
+<span class="nc bnc" id="L10" title="All 28 branches missed.">@Data</span>
+public class Result&lt;T&gt; {
+    //success
+<span class="nc" id="L13">    private boolean success;</span>
+    //status code
+<span class="nc" id="L15">    private int code;</span>
+    //message
+<span class="nc" id="L17">    private String msg;</span>
+    //data
+<span class="nc" id="L19">    private T data;</span>
+<span class="nc" id="L20">    public Result() {</span>
+
+<span class="nc" id="L22">    }</span>
+    //constructor
+<span class="nc" id="L24">    public Result(Boolean success,Integer code, String msg,T data) {</span>
+<span class="nc" id="L25">        this.success = success;</span>
+<span class="nc" id="L26">        this.code = code;</span>
+<span class="nc" id="L27">        this.msg = msg;</span>
+<span class="nc" id="L28">        this.data = data;</span>
+<span class="nc" id="L29">    }</span>
+    //base exception result
+    public static Result error(BaseException de){
+<span class="nc" id="L32">        return Result.builder()</span>
+<span class="nc" id="L33">                .success(false)</span>
+<span class="nc" id="L34">                .code(de.getErrorCode())</span>
+<span class="nc" id="L35">                .msg(de.getErrorMsg())</span>
+<span class="nc" id="L36">                .build();</span>
+    }
+    //error enum result
+    public static Result error(ErrorEnum errorEnum){
+<span class="nc" id="L40">        return Result.builder()</span>
+<span class="nc" id="L41">                .success(false)</span>
+<span class="nc" id="L42">                .code(errorEnum.getErrorCode())</span>
+<span class="nc" id="L43">                .msg(errorEnum.getErrorMsg())</span>
+<span class="nc" id="L44">                .build();</span>
+    }
+
+    public static &lt;T&gt; Result success(T data) {
+<span class="nc" id="L48">        return Result.builder()</span>
+<span class="nc" id="L49">                .success(true)</span>
+<span class="nc" id="L50">                .code(SUCCESS_CODE)</span>
+<span class="nc" id="L51">                .msg(SUCCESS_MESSAGE)</span>
+<span class="nc" id="L52">                .data(data)</span>
+<span class="nc" id="L53">                .build();</span>
+    }
+
+    public static Result success() {
+<span class="nc" id="L57">        return Result.builder()</span>
+<span class="nc" id="L58">                .success(true)</span>
+<span class="nc" id="L59">                .code(SUCCESS_CODE)</span>
+<span class="nc" id="L60">                .msg(SUCCESS_MESSAGE)</span>
+<span class="nc" id="L61">                .build();</span>
+    }
+
+    public static Result fail() {
+<span class="nc" id="L65">        return Result.builder()</span>
+<span class="nc" id="L66">                .success(false)</span>
+<span class="nc" id="L67">                .code(ErrorEnum.INTERNAL_SERVER_ERROR.getErrorCode())</span>
+<span class="nc" id="L68">                .msg(ErrorEnum.INTERNAL_SERVER_ERROR.getErrorMsg())</span>
+<span class="nc" id="L69">                .build();</span>
+    }
+
+    public static Result result(boolean success) {
+<span class="nc bnc" id="L73" title="All 2 branches missed.">        return success ? Result.success() : Result.fail();</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
