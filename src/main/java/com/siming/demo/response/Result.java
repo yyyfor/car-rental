@@ -9,8 +9,6 @@ import static com.siming.demo.constant.Constant.SUCCESS_MESSAGE;
 @Builder
 @Data
 public class Result<T> {
-    //success
-    private boolean success;
     //status code
     private int code;
     //message
@@ -21,8 +19,7 @@ public class Result<T> {
 
     }
     //constructor
-    public Result(Boolean success,Integer code, String msg,T data) {
-        this.success = success;
+    public Result(Integer code, String msg,T data) {
         this.code = code;
         this.msg = msg;
         this.data = data;
@@ -30,7 +27,6 @@ public class Result<T> {
     //base exception result
     public static Result error(BaseException de){
         return Result.builder()
-                .success(false)
                 .code(de.getErrorCode())
                 .msg(de.getErrorMsg())
                 .build();
@@ -38,7 +34,6 @@ public class Result<T> {
     //error enum result
     public static Result error(ErrorEnum errorEnum){
         return Result.builder()
-                .success(false)
                 .code(errorEnum.getErrorCode())
                 .msg(errorEnum.getErrorMsg())
                 .build();
@@ -46,7 +41,6 @@ public class Result<T> {
 
     public static <T> Result success(T data) {
         return Result.builder()
-                .success(true)
                 .code(SUCCESS_CODE)
                 .msg(SUCCESS_MESSAGE)
                 .data(data)
@@ -55,7 +49,6 @@ public class Result<T> {
 
     public static Result success() {
         return Result.builder()
-                .success(true)
                 .code(SUCCESS_CODE)
                 .msg(SUCCESS_MESSAGE)
                 .build();
@@ -63,7 +56,6 @@ public class Result<T> {
 
     public static Result fail() {
         return Result.builder()
-                .success(false)
                 .code(ErrorEnum.INTERNAL_SERVER_ERROR.getErrorCode())
                 .msg(ErrorEnum.INTERNAL_SERVER_ERROR.getErrorMsg())
                 .build();
