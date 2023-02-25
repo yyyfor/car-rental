@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.siming.demo.mapper.CarMapper">
+
+    <select id="searchCar" resultType="com.siming.demo.entity.Car">
+        SELECT c.id, c.brand, c.model FROM car c
+            LEFT JOIN booking b on c.id = b.car_id
+        where (b.start_time &gt; #{endTime} or b.end_time &lt; #{startTime})
+        and c.status = #{status}
+        <if test="brand != null">
+            AND c.brand = #{brand}
+        </if>
+        <if test="model != null">
+            AND c.model = #{model}
+        </if>
+        UNION
+        SELECT c.id, c.brand, c.model FROM car c
+        LEFT JOIN booking b on c.id = b.car_id
+        where c.status = #{status} and b.id IS NULL
+        <if test="brand != null">
+            AND c.brand = #{brand}
+        </if>
+        <if test="model != null">
+            AND c.model = #{model}
+        </if>
+    </select>
+</mapper>

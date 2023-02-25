@@ -14,11 +14,11 @@ db -> us: user data
 us --> user: success if user name not exists
 us --> user: fail if user name exists
 
-== register car ==
-admin -> cs: register car
-cs -> db: insert car data
-db -> cs: insert result
-cs -> admin: insert result
+== register or delete car ==
+admin -> cs: register or delete car
+cs -> db: insert or update car data
+db -> cs: insert or update result
+cs -> admin: result
 
 == user search car ==
 user -> cs: search for available cars

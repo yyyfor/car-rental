@@ -12,6 +12,7 @@ services:
       - MYSQL_PASSWORD=test
       - MYSQL_USER=user
       - MYSQL_DATABASE=rental_car
+      - TZ=Asia/Shanghai
 
 volumes:
   my-datavolume:

@@ -1,9 +1,18 @@
 package com.siming.demo.controller;
 
+import com.siming.demo.request.RegisterUserRequest;
+import com.siming.demo.response.Result;
+import com.siming.demo.service.IUserService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import lombok.AllArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 /**
  * <p>
@@ -16,9 +25,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/v1/user")
 @Tag(name = "user controller")
+@AllArgsConstructor
 public class UserController {
 
-    @PostMapping()
-    public
+    private final IUserService userService;
+
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(summary = "register a user")
+    public Result register(@Valid @RequestBody RegisterUserRequest request) {
+        userService.registerUser(request.getName());
+        return Result.success();
+    }
 
 }

@@ -18,7 +18,7 @@ public class CodeGenerator {
                                 .moduleName("demo") // 设置父包模块名
                 )
                 .strategyConfig(builder ->
-                        builder.addInclude("user", "car", "booking")
+                        builder.addInclude("car")
                                 .entityBuilder().enableLombok().build()
                                 .controllerBuilder().enableRestStyle().build()
                 )

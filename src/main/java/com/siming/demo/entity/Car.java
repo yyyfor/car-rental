@@ -4,7 +4,10 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * <p>
@@ -15,6 +18,9 @@ import lombok.Data;
  * @since 2023-02-24
  */
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Car {
 
     /**
@@ -32,6 +38,11 @@ public class Car {
      * the model of the car
      */
     private String model;
+
+    /**
+     * the status of the car. 0 - in use, 1 - deleted
+     */
+    private Integer status;
 
     /**
      * the create time of the car

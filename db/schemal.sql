@@ -32,3 +32,23 @@ create table user
 )
     comment 'user table' collate = utf8mb4_unicode_ci;
 
+alter table car
+    add status tinyint null comment 'the status of the car. 0-in use, 1-deleted' after model;
+
+create index idx_end_time
+    on booking (end_time)
+    comment 'index on end time';
+
+create index idx_start_time
+    on booking (start_time)
+    comment 'start time index';
+
+create index idx_name
+    on user (name)
+    comment 'index on name';
+
+create index idx_brand_model
+    on car (brand, model)
+    comment 'index on (brand, model)';
+
+
