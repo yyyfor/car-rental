@@ -29,7 +29,8 @@ public class CarServiceImpl extends ServiceImpl<CarMapper, Car> implements ICarS
     @Override
     public void registerCar(RegisterCarRequest request) {
         var car = Car.builder().brand(request.getBrand())
-                .model(request.getModel()).build();
+                .model(request.getModel())
+                .status(CarStatusEnum.IN_USE.getStatus()).build();
         save(car);
     }
 
