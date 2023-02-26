@@ -33,7 +33,7 @@ create table user
     comment 'user table' collate = utf8mb4_unicode_ci;
 
 alter table car
-    add status tinyint null comment 'the status of the car. 0-in use, 1-deleted' after model;
+    add status tinyint not null default 0 comment 'the status of the car. 0-in use, 1-deleted' after model;
 
 create index idx_end_time
     on booking (end_time)
